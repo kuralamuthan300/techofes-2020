@@ -210,10 +210,10 @@ a:hover {
     padding: 30px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1365px) {
     .photos {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         border-radius: 100%;
         padding: 10px;
     }
