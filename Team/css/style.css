@@ -198,3 +198,23 @@ a:hover {
 .team-member figure img {
     min-width: 100%;
 }
+
+.core_name {
+    color: white;
+}
+
+.photos {
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    padding: 30px;
+}
+
+@media screen and (max-width: 992px) {
+    .photos {
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        padding: 10px;
+    }
+}
