@@ -201,6 +201,8 @@ a:hover {
 
 .core_name {
     color: white;
+    font-size: large;
+    padding: 20px;
 }
 
 .photos {
@@ -213,6 +215,8 @@ a:hover {
     height: auto;
     border-radius: 100%;
     padding: 30px;
+    transition: transform .2s;
+    /* Animation */
 }
 
 
@@ -226,3 +230,24 @@ a:hover {
     }
 }
 */
+
+@media (hover: hover) {
+    .photos:hover {
+        transform: scale(1.1);
+        border-radius: 100%;
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+}
+
+.domain_name {
+    font-weight: bold;
+    color: white;
+    margin: 0 auto;
+    font-size: 25px;
+    padding: 20px;
+    text-transform: uppercase;
+    background: -webkit-gradient(linear, left top, right top, from(white), to(#fbd62a));
+    background: linear-gradient(to right, white 0%, #fbd62a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
