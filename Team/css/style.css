@@ -251,3 +251,15 @@ a:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.saas_logo {
+    transition: transform 0.2s;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+}
+
+@media (hover: hover) {
+    .saas_logo:hover {
+        transform: scale(1.1);
+    }
+}
