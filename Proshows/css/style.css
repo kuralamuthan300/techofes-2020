@@ -9,12 +9,6 @@
             }
             /*Nav bar start*/
             
-            .opa {
-                border-radius: 20px;
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-            
             .navbar-custom {
                 padding-top: 1rem;
                 padding-bottom: 1rem;
@@ -98,18 +92,17 @@
                 position: relative;
             }
             
-            @media screen and (max-width: 800px) {
-                .movie-card {
-                    width: 90vw;
-                    height: 60vh;
-                }
-            }
-            
             @media screen and (max-width: 600px) {
+                p {
+                    text-align: center;
+                    padding: 12px;
+                }
                 .movie-card {
                     background-position: 50% 0%;
                     background-size: cover;
-                    height: 400px;
+                    width: 90vw;
+                    height: 85vh;
+                    text-align: center;
                 }
             }
             /*
@@ -142,22 +135,9 @@
             
             @media screen and (max-width: 600px) {
                 .movie-card__overlay {
+                    text-align: center;
                     background: -webkit-gradient(linear, left top, left bottom, from(rgba(42, 159, 255, 0.2)), color-stop(60%, #212120), to(#212120));
                     background: linear-gradient(to bottom, rgba(42, 159, 255, 0.2) 0%, #212120 60%, #212120 100%);
-                }
-            }
-            
-            .movie-card__share {
-                padding: 1em;
-                display: inline-block;
-                width: 100%;
-                max-width: 130px;
-            }
-            
-            @media screen and (max-width: 600px) {
-                .movie-card__share {
-                    display: block;
-                    width: 100%;
                 }
             }
             
@@ -198,6 +178,16 @@
                 padding-bottom: 1em;
             }
             
+            @media screen and (max-width: 600px) {
+                .movie-card__content {
+                    width: 90vw;
+                    height: 85vh;
+                    padding: 12px;
+                    position: absolute;
+                    bottom: 10px;
+                }
+            }
+            
             .movie-card__header {
                 margin-bottom: 2em;
             }
@@ -211,12 +201,12 @@
             .movie-card__info {
                 text-transform: uppercase;
                 letter-spacing: 2px;
-                font-size: .8em;
+                font-size: 1em;
                 color: #2a9fff;
                 line-height: 1;
                 margin: 0;
                 font-weight: 700;
-                opacity: .5;
+                opacity: .75;
             }
             
             .movie-card__desc {
@@ -237,7 +227,9 @@
             
             .btn {
                 padding: .5rem 2rem;
-                background-color: rgba(255, 255, 255, 0.4);
+                color: #dddb72;
+                font-weight: bold;
+                overflow: hidden;
             }
             
             .btn-outline {
@@ -249,4 +241,59 @@
                 border-color: #2a9fff;
                 color: #2a9fff;
                 box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
+            }
+            
+            .concert_night {
+                background-image: url('../img/concert.JPG');
+            }
+            
+            .choreo {
+                background-image: url('../img/choreo.JPG');
+            }
+            
+            .t_awards {
+                background-image: url('../img/t_awards.JPG');
+            }
+            
+            @media screen and (max-width: 600px) {
+                .btn {
+                    font-weight: bolder;
+                    width: inherit;
+                    position: absolute;
+                    bottom: 0px;
+                    margin: 0 auto;
+                    padding: 13px;
+                }
+                .btn-outline {
+                    background-color: transparent;
+                    border: 0px solid #ffffff;
+                }
+                .movie-card__desc {
+                    position: absolute;
+                    bottom: 13px;
+                }
+                .movie-card__title {
+                    padding: 10px;
+                    width: inherit;
+                    text-align: center;
+                }
+                .t_awards_title {
+                    padding: 10px;
+                    width: 90vw;
+                    text-align: center;
+                }
+                .btn-outline:hover {
+                    border-color: #2a9fff;
+                    color: #2a9fff;
+                    box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
+                }
+                .concert_night {
+                    background-image: url('../img/potrait/C02.jpg');
+                }
+                .choreo {
+                    background-image: url('../img/potrait/dance6.jpg');
+                }
+                .t_awards {
+                    background-image: url('../img/potrait/t_awards.JPG');
+                }
             }

@@ -31,7 +31,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top opa">
         <div class="container">
 
-            <a class="navbar-brand " href="./index.html" style="color:white;margin-bottom: 20px;">
+            <a class="navbar-brand " href="../index.html" style="color:white;margin-bottom: 20px;">
                  Home
                 <!-- -->
             </a>
@@ -47,13 +47,13 @@
                         <a class="nav-link glow2" href="#">Carnivals</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link glow2" href="#">Proshows</a>
+                        <a class="nav-link glow2" href="./index.html">Proshows</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link glow2" href="#">Sponsers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link glow2" href="./Team/index.html">About us</a>
+                        <a class="nav-link glow2" href="../Team/index.html">About us</a>
                     </li>
                 </ul>
             </div>
@@ -61,44 +61,50 @@
     </nav>
 
     <!-- partial:index.partial.html -->
-    <div id="movie-card-list" style="opacity: 1.0;">
-        <div class="movie-card" data-movie="Concert night" style="background-image: url('./img/concert.JPG');">
-            <div class="movie-card__overlay"></div>
+    <div id="desktop">
+        <div id="movie-card-list" style="opacity: 1.0;">
+            <div class="movie-card concert_night" data-movie="Concert night">
+                <div class="movie-card__overlay"></div>
 
-            <div class="movie-card__content">
-                <div class="movie-card__header">
-                    <h1 class="movie-card__title">CONCERT NIGHT</h1>
-                    <h4 class="movie-card__info">27 February,2020</h4>
+                <div class="movie-card__content">
+                    <div class="movie-card__header">
+                        <h1 class="movie-card__title">CONCERT NIGHT</h1>
+                        <h4 class="movie-card__info">27 February,2020</h4>
+                    </div>
+                    <p class="movie-card__desc">The night of breezy voices and highly comforting strums. Notable singers and their bands perform on the main stage. Noteworthy singers like Saindhavi, Gaana bala, parikrama band, Bombay Jayashree, Andrea, Karthik, Vijay Yesudas, Aalap
+                        Raju, Ramya NSK and many famous singers have performed on the grand stage.</p>
+                    <button class="btn btn-outline  movie-card__button glow_book_tickets" type="button">Book Tickets</button>
                 </div>
-                <p class="movie-card__desc">The night of breezy voices and highly comforting strums. Notable singers and their bands perform on the main stage. Noteworthy singers like Saindhavi, Gaana bala, parikrama band, Bombay Jayashree, Andrea, Karthik, Vijay Yesudas, Aalap
-                    Raju, Ramya NSK and many famous singers have performed on the grand stage.</p>
-                <button class="btn btn-outline movie-card__button" type="button" style="color: #dddb72; font-weight:bold;">Book Tickets</button>
+            </div>
+            <div class="movie-card t_awards" data-movie="T-awards">
+                <div class="movie-card__overlay"></div>
+                <div class="movie-card__content">
+                    <div class="movie-card__header">
+                        <h1 class="movie-card__title t_awards_title">T-AWARDS</h1>
+                        <h4 class="movie-card__info">28 February,2020</h4>
+                    </div>
+                    <p class="movie-card__desc">The signature event of techofes for presenting accolades to the best artists in Tamil Cinema Industry.Nearly twenty artists will be honoured on this day followed by mesmerising performances.It is highly popular and the student crowd
+                        throngs to have a look at their on-screen role models and more than life heros and heroines.</p>
+                    <button class="btn  btn-outline movie-card__button glow_book_tickets" type="button">Book Tickets</button>
+                </div>
+            </div>
+            <div class="movie-card choreo" data-movie="Choreo night">
+                <div class="movie-card__overlay"></div>
+                <div class="movie-card__content">
+                    <div class="movie-card__header">
+                        <h1 class="movie-card__title">CHOREO NIGHT</h1>
+                        <h4 class="movie-card__info">29 February,2020</h4>
+                    </div>
+                    <p class="movie-card__desc"> The choreo night boasts of a rich tradition of involvement dance performances by dance groups from different colleges battling it out to be the best.The Talent of Techofes has been a spot of attraction for the students who wish for
+                        their voices to be heard.</p>
+                    <button class="btn btn-outline movie-card__button glow_book_tickets" type="button">Book Tickets</button>
+                </div>
             </div>
         </div>
-        <div class="movie-card" data-movie="T-awards" style="background-image: url('./img/t_awards.JPG');">
-            <div class="movie-card__overlay"></div>
-            <div class="movie-card__content">
-                <div class="movie-card__header">
-                    <h1 class="movie-card__title">T-AWARDS</h1>
-                    <h4 class="movie-card__info">28 February,2020</h4>
-                </div>
-                <p class="movie-card__desc">The signature event of techofes for presenting accolades to the best artists in Tamil Cinema Industry.Nearly twenty artists will be honoured on this day followed by mesmerising performances.It is highly popular and the student crowd throngs
-                    to have a look at their on-screen role models and more than life heros and heroines.</p>
-                <button class="btn btn-outline movie-card__button" type="button" style="color: #dddb72; font-weight:bold;">Book Tickets</button>
-            </div>
-        </div>
-        <div class="movie-card" data-movie="Choreo night" style="background-image: url('./img/choreo.JPG');">
-            <div class="movie-card__overlay"></div>
-            <div class="movie-card__content">
-                <div class="movie-card__header">
-                    <h1 class="movie-card__title">CHOREO NIGHT</h1>
-                    <h4 class="movie-card__info">29 February,2020</h4>
-                </div>
-                <p class="movie-card__desc"> The choreo night boasts of a rich tradition of involvement dance performances by dance groups from different colleges battling it out to be the best.The Talent of Techofes has been a spot of attraction for the students who wish for their
-                    voices to be heard.</p>
-                <button class="btn btn-outline movie-card__button" type="button" style="color: #dddb72 ; font-weight:bold;">Book Tickets</button>
-            </div>
-        </div>
+
+    </div>
+    <div id="mobile">
+
     </div>
     <!-- partial -->
     <script>
