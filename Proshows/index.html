@@ -2,21 +2,67 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <title>CodePen - Responsive movie card</title>
+    <title>Proshows</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.4.1/cerulean/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+
+
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+
+
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Proshows/css/style.css">
+
+
 
 </head>
 
-<body>
-    <script src="./js/grid.js"></script>
+<body onload="myFunction()">
+
+    <script src="../Proshows/js/grid.js"></script>
+    <!--Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top opa">
+        <div class="container">
+
+            <a class="navbar-brand " href="./index.html" style="color:white;margin-bottom: 20px;">
+                 Home
+                <!-- -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="border-radius: 25px;">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link glow2" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow2" href="#">Carnivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow2" href="#">Proshows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow2" href="#">Sponsers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow2" href="./Team/index.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- partial:index.partial.html -->
     <div id="movie-card-list" style="opacity: 1.0;">
-        <div class="movie-card" data-movie="Concert night">
+        <div class="movie-card" data-movie="Concert night" style="background-image: url('./img/concert.JPG');">
             <div class="movie-card__overlay"></div>
 
             <div class="movie-card__content">
@@ -25,12 +71,11 @@
                     <h4 class="movie-card__info">27 February,2020</h4>
                 </div>
                 <p class="movie-card__desc">The night of breezy voices and highly comforting strums. Notable singers and their bands perform on the main stage. Noteworthy singers like Saindhavi, Gaana bala, parikrama band, Bombay Jayashree, Andrea, Karthik, Vijay Yesudas, Aalap
-                    Raju, Ramya NSK and many famous singers have performed on the grand stage.<br/><br/>
-                    <button class="btn btn-outline movie-card__button" type="button">Book now</button>
-                </p>
+                    Raju, Ramya NSK and many famous singers have performed on the grand stage.</p>
+                <button class="btn btn-outline movie-card__button" type="button" style="color: #dddb72; font-weight:bold;">Book Tickets</button>
             </div>
         </div>
-        <div class="movie-card" data-movie="T-awards">
+        <div class="movie-card" data-movie="T-awards" style="background-image: url('./img/t_awards.JPG');">
             <div class="movie-card__overlay"></div>
             <div class="movie-card__content">
                 <div class="movie-card__header">
@@ -38,12 +83,11 @@
                     <h4 class="movie-card__info">28 February,2020</h4>
                 </div>
                 <p class="movie-card__desc">The signature event of techofes for presenting accolades to the best artists in Tamil Cinema Industry.Nearly twenty artists will be honoured on this day followed by mesmerising performances.It is highly popular and the student crowd throngs
-                    to have a look at their on-screen role models and more than life heros and heroines.<br/><br/>
-                    <button class="btn btn-outline " type="button">Book now</button>
-                </p>
+                    to have a look at their on-screen role models and more than life heros and heroines.</p>
+                <button class="btn btn-outline movie-card__button" type="button" style="color: #dddb72; font-weight:bold;">Book Tickets</button>
             </div>
         </div>
-        <div class="movie-card" data-movie="Choreo night">
+        <div class="movie-card" data-movie="Choreo night" style="background-image: url('./img/choreo.JPG');">
             <div class="movie-card__overlay"></div>
             <div class="movie-card__content">
                 <div class="movie-card__header">
@@ -51,14 +95,20 @@
                     <h4 class="movie-card__info">29 February,2020</h4>
                 </div>
                 <p class="movie-card__desc"> The choreo night boasts of a rich tradition of involvement dance performances by dance groups from different colleges battling it out to be the best.The Talent of Techofes has been a spot of attraction for the students who wish for their
-                    voices to be heard.<br/><br/>
-                    <button class="btn btn-outline movie-card__button" type="button">Book now</button>
-                </p>
+                    voices to be heard.</p>
+                <button class="btn btn-outline movie-card__button" type="button" style="color: #dddb72 ; font-weight:bold;">Book Tickets</button>
             </div>
         </div>
     </div>
     <!-- partial -->
-
+    <script>
+        function myFunction() {
+            alert("Page is loaded");
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
 </body>
 
 </html>

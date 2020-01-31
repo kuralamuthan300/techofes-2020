@@ -1,0 +1,52 @@
+/** TIPS: 
+1. The carousel shouldn't be in any other div, like for example div with class container. 
+2. You can align image position in classes bg1, bg2, bg3 using css background-position.
+*/
+
+
+/* Carousel 100% Fullscreen */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-caption {
+    z-index: 10;
+}
+
+.carousel .item {
+    background-color: #777;
+}
+
+.carousel .carousel-inner .bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel .carousel-inner .bg1 {
+    background-position: center top;
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url('./concertnight3.JPG');
+}
+
+.carousel .carousel-inner .bg2 {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(234, 236, 72, 0.678)), url('./dance7.JPG');
+    background-position: center center;
+}
+
+.carousel .carousel-inner .bg3 {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(32, 103, 184, 0.73)), url('./T_awards.jpg');
+    background-position: center bottom;
+}
