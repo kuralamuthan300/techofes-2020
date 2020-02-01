@@ -263,3 +263,20 @@ a:hover {
         transform: scale(1.1);
     }
 }
+
+.domain_border {
+    border-color: #fbd62a;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+@media screen and (max-width: 900px) {
+    .domain_border {
+        border-color: black;
+        border-radius: 0px;
+        border-style: solid;
+    }
+    .domain_name {
+        font-size: 35px;
+    }
+}
