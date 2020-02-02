@@ -53,7 +53,7 @@ header.masthead .masthead-content .masthead-subheading {
 
 @media (min-width:992px) {
     header.masthead {
-        padding-top: calc(10rem + 55px);
+        padding-top: calc(10rem + 40px);
         padding-bottom: 10rem
     }
     header.masthead .masthead-content .masthead-heading {
@@ -82,6 +82,8 @@ header.masthead .masthead-content .masthead-subheading {
 */
 
 .opa {
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 10px;
     margin-right: 10px;
 }
