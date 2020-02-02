@@ -540,3 +540,24 @@ textarea {
         transform: translate(0);
     }
 }
+
+.img-fluid {
+    padding: 60px;
+}
+
+.explore_heading {
+    font-size: xx-large;
+}
+
+section {
+    padding: 0px;
+}
+
+@media (max-width:800px) {
+    .img-fluid {
+        padding: 0px;
+    }
+    .explore_heading {
+        font-size: xx-large;
+    }
+}
