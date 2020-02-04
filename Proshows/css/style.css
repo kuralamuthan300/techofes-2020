@@ -380,3 +380,9 @@
             }
         }
         */
+        
+        @media (max-width:800px) {
+            .logo a {
+                font-size: 60px;
+            }
+        }

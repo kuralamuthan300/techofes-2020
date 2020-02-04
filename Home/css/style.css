@@ -526,6 +526,9 @@ section {
 }
 
 @media (max-width:800px) {
+    .logo a {
+        font-size: 60px;
+    }
     .img-fluid {
         padding: 0px;
     }

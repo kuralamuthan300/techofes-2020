@@ -226,7 +226,7 @@ img {
 
 @media screen and (max-width: 600px) {
     .logo a {
-        font-size: 60px;
+        font-size: 55px;
     }
     .logo a:first-line {
         font-size: 60px;

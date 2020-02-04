@@ -280,3 +280,9 @@ a:hover {
         font-size: 35px;
     }
 }
+
+@media (max-width:800px) {
+    .logo a {
+        font-size: 60px;
+    }
+}
