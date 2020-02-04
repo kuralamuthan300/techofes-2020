@@ -19,6 +19,18 @@
                             <p style="text-align: center;font-family: 'Dosis', sans-serif;color: white;font-weight: 900;">
                                 <img src="goldenlogo.png" alt="logo" style="width: 200px;height: 100px;" />
                             </p>
+                            
+<?php
+	$fname=strtoupper($_POST["first_name"]);
+	$lname=strtoupper($_POST["last_name"]);
+ 	$email=$_POST["email"];
+	$phone=$_POST["phone"];
+	$college_id=strtoupper($_POST["c_id"]);
+    $college_name=strtoupper($_POST["c_name"]);
+    $college_city=strtoupper($_POST["college_city"]);
+
+?>
+
 <br/>
 <br/>
 
@@ -31,8 +43,12 @@
    }else{
        if(strlen($phone)<10)
        {
+        echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
            echo "<center>Phone number not valid</center>";
-       }else echo "<center>Email or Phone already exists </center>";
+       }else {
+        echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
+        echo "<center>Email or Phone already exists </center>";
+       }
         
    }
 
@@ -56,9 +72,25 @@
     $sql = "INSERT INTO online_reg (phone, name, college_id,college_name,college_place,mail_id,pay_at_hospi_id) VALUES ('".$phone."','".$fname." ".$lname."','".$college_id."','".$college_name."','".$college_city."','".$email."','".$pay_at_hospi."');" ;                                                      
 
     if (mysqli_query($conn, $sql)) {
-        echo "<center>Registration Successfull</center><br/>";
-        echo ("<center><b style=\"font-weight:900;color:white;font-size:30px;color:green\">PAY AT HOSPI ID :".$pay_at_hospi."</b><center>");
+        echo "<center style=\"color:green;font-size:20px;\">Registration Successfull</center><br/>";
+        echo "<h3 style=\"text-align: center;color:white;font-weight:bolder\">TAKE A SCREENSHOT</h3></br>
+        <center><b style=\"color:white;text-align: center; \">";
+        echo "Name                    :".$fname." ".$lname."<br />";
+        echo "Phone                   :".$phone."<br />";
+        echo "E-Mail ID               :".$email."<br />";
+        echo "College Roll no   :".$college_id."<br />";
+        echo "College name            :".$college_name."<br />";
+        echo "College city            :".$college_city."<br /><br/>";
+        echo "</b></center>";
+        echo ("<center><b style=\"font-weight:700;color:white;font-size:20px;color:green\">PAY_AT_HOSPI_ID :".$pay_at_hospi."</b><center><br/><br/>");
+        echo ("<h4>Note : </h4>
+        <ol>
+          <li>Show the PAY_AT_HOSPI ID in the Hospitality desk and pay the entry fee during techofes.</li>
+          <li>After paying entry fees at hospitality desk,Unique T-ID is given</li>
+          <li>Using T-ID you can attend the respective events</li>
+        </ol>");
     } else {
+        echo "<center style=\"color:red\">Registration Unuccessfull</center><br/>";
         echo "Error occoured ! Try again later !";
     }
 
@@ -77,6 +109,8 @@
 // Check connection
         if ($conn->connect_error)
         {
+        echo "<center style=\"color:red\">Registration Unuccessfull</center><br/>";
+        echo "<center> DB error</center>";
         die("DB Connection failed: " . $conn->connect_error);
         }
 
@@ -91,7 +125,7 @@
 ?>
 
                             <div class="mrgn-30-top">
-                                <button class="btn btn-larger btn-red btn-block" style="color: yellow;border-color: yellow;font-weight: bolder;" onclick="window.location.href='../index.html'" /> GO TO HOME
+                                <button class="btn btn-larger btn-red btn-block" style="color: yellow;border-color: yellow;font-weight: bolder;" onclick="window.location.href='../index.html'" /> GO BACK
                                 </button>
                             </div>
                         </div>
