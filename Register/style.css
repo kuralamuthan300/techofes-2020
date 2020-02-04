@@ -32,7 +32,7 @@ btn {
 
 .btn-larger {
     padding: 15px 40px !important;
-    border: 2px solid #FBD62A !important;
+    border: 5px solid #FBD62A !important;
     ;
     border-radius: 0px !important;
     ;
@@ -47,15 +47,13 @@ btn {
     transition: all .6s;
 }
 
-.btn-larger:hover,
-.btn-larger:focus,
-.btn-larger:active,
-.btn-larger.active,
-.open .dropdown-toggle.btn-larger {
-    border-color: #FBD62A;
-    color: #fff;
-    background-color: #FBD62A;
-    border-radius: 0
+.btn-larger:hover {
+    border: 6px;
+}
+
+.btn-red {
+    border: 5px solid red !important;
+    margin: 0 auto;
 }
 
 .btn-larger:active,
@@ -146,10 +144,7 @@ div#form {
     transition: all .6s;
 }
 
-#userform .nav-justified>li>a:hover {
-    background: #AEA8D3;
-    color: #FFF;
-}
+#userform .nav-justified>li>a:hover {}
 
 #userform .nav-tabs>li>a {
     border: 0px solid transparent;

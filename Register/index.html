@@ -2,39 +2,28 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Register</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="icon" href="../title_logo.png" type="image/x-icon" style="border-radius: 100%;" />
-
-    <!--CDN -->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.4.1/cerulean/bootstrap.min.css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!--CDN ends here-->
     <link rel="stylesheet" href="./style.css">
-
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 </head>
 
 <body>
-    <script src="./grid.js"></script>
-    <!-- partial:index.partial.html -->
-
 
     <div id="form">
         <div class="container">
+
             <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-md-8 col-md-offset-2">
                 <div id="userform">
-                    <ul class="nav nav-tabs nav-justified" role="tablist">
-                        <li class="active"><a href="#signup" role="tab" data-toggle="tab"> REGISTRATION</a></li>
 
-                    </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade active in" id="signup">
+                            <p style="text-align: center;font-family: 'Dosis', sans-serif;color: white;font-weight: 900;">
+                                <img src="../Home/img/goldenlogo.png" alt="logo" style="width: 200px;height: 100px;" />
+                            </p>
                             <form id="signup">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6">
@@ -73,7 +62,11 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="mrgn-30-top">
-                                    <button type="submit" class="btn btn-larger btn-block" /> CLICK HERE TO REGISTER
+                                    <button type="submit" class="btn btn-larger btn-block" style="color: #FBD62A;font-weight: bolder;" /> CLICK HERE TO REGISTER
+                                    </button>
+                                </div>
+                                <div class="mrgn-30-top">
+                                    <button class="btn btn-larger btn-red btn-block" style="color: red;border-color: red;font-weight: bolder;" onclick="window.location.href='../index.html'" /> GO TO HOME
                                     </button>
                                 </div>
                             </form>
@@ -89,6 +82,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!-- partial -->
+    <script src="./grid.js"></script>
     <script src="./script.js"></script>
 
 </body>
