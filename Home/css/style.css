@@ -4,21 +4,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-
-/* Hide scrollbar for IE and Edge */
-
 body {
     background-color: black;
     -ms-overflow-style: none;
 }
-
-
-/* grid annimation 
-canvas {
-    filter: blur(15px);
-    display: block;
-}
-*/
 
 
 /*Social icon */
@@ -30,12 +19,6 @@ header.masthead {
     position: relative;
     overflow: hidden;
     padding-top: calc(10rem + 55px);
-    /* background: black;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
-    background-size: cover
-    */
 }
 
 header.masthead .masthead-content {
@@ -65,21 +48,7 @@ header.masthead .masthead-content .masthead-subheading {
 }
 
 
-/* Header over grid 
-#wrapper {
-    position: relative;
-}
-.content {
-    position: relative;
-    z-index: 100;
-}
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -100;
-}
-*/
+/*Nav bar starts Here */
 
 .opa {
     margin-top: auto;
@@ -89,9 +58,6 @@ header.masthead .masthead-content .masthead-subheading {
 }
 
 .navbar-custom {
-    /* padding-top: 1rem;
-    padding-bottom: 1rem;
-    */
     background-color: rgb(0, 0, 0);
 }
 
@@ -108,6 +74,45 @@ header.masthead .masthead-content .masthead-subheading {
     font-weight: 700;
     letter-spacing: .1rem
 }
+
+
+/*In this page <a> tag is selected use your own class name or id to prevent corruption in your code*/
+
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.glow2 {
+    color: #FFDD1B;
+}
+
+.glow2:hover {
+    -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+    animation: neon3 1.5s ease-in-out infinite alternate;
+}
+
+
+/*In this page <a> tag is selected use your own class name or id to prevent corruption in your code*/
+
+a:hover {
+    color: #ffffff;
+}
+
+@-webkit-keyframes neon3 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
+}
+
+
+/*Nav bar ends here*/
 
 
 /* Image carousal */
@@ -273,39 +278,6 @@ img {
     }
     to {
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
-    }
-}
-
-
-/* COntents glow in nav bar*/
-
-a {
-    text-decoration: none;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-.glow2 {
-    color: #FFDD1B;
-}
-
-.glow2:hover {
-    -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon3 1.5s ease-in-out infinite alternate;
-    animation: neon3 1.5s ease-in-out infinite alternate;
-}
-
-a:hover {
-    color: #ffffff;
-}
-
-@-webkit-keyframes neon3 {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
-    }
-    to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
     }
 }
 
