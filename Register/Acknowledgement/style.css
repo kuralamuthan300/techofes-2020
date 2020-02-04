@@ -153,8 +153,6 @@ div#form {
     transition: all .6s;
 }
 
-#userform .nav-justified>li>a:hover {}
-
 #userform .nav-tabs>li>a {
     border: 0px solid transparent;
     border-radius: 0

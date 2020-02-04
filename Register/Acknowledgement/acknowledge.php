@@ -2,7 +2,7 @@
 <meta charset="UTF-8">
 <title>Acknowledge</title>
 <meta name="viewport" content="width=device-width, user-scalable=no">
-<link rel="icon" href="./title_logo.png" type="image/x-icon" style="border-radius: 100%;" />
+<link rel="icon" href="title_logo.png" type="image/x-icon" style="border-radius: 100%;" />
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
