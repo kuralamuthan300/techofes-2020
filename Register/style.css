@@ -6,6 +6,15 @@ html {
     font-family: 'Dosis', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: black;
+    -ms-overflow-style: none;
+}
+
 .tab-content {
     display: flex;
     justify-content: center;
