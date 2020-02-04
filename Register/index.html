@@ -25,52 +25,58 @@
                             <p style="text-align: center;font-family: 'Dosis', sans-serif;color: white;font-weight: 900;">
                                 <img src="../Home/img/goldenlogo.png" alt="logo" style="width: 200px;height: 100px;" />
                             </p>
-                            <form id="signup">
+                            <form id="signup" action="./Acknowledgement/acknowledge.php" method="post">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label>First Name<span class="req">*</span> </label>
-                                            <input type="text" class="form-control" id="first_name" required data-validation-required-message="Please enter your name." autocomplete="off">
+                                            <input type="text" class="form-control" name="first_name" required data-validation-required-message="Please enter your name.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Last Name<span class="req">*</span> </label>
-                                            <input type="text" class="form-control" id="last_name" required data-validation-required-message="Please enter your name." autocomplete="off">
+                                            <input type="text" class="form-control" name="last_name" required data-validation-required-message="Please enter your name.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label> Your Email<span class="req">*</span> </label>
-                                    <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address." autocomplete="off">
+                                    <label> Your Email ID<span class="req">*</span> </label>
+                                    <input type="email" class="form-control" name="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label> Your Phone No<span class="req">*</span> </label>
+                                    <input type="number" class="form-control" name="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label> College ID<span class="req">*</span> </label>
+                                    <input type="text" class="form-control" name="c_id" required data-validation-required-message="Please enter your phone number.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
                                     <label> College Name<span class="req">*</span> </label>
-                                    <input type="text" class="form-control" id="c_name" required data-validation-required-message="Please enter your college name." autocomplete="off">
+                                    <input type="text" class="form-control" name="c_name" required data-validation-required-message="Please enter your college name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
                                     <label> College city<span class="req">*</span> </label>
-                                    <input type="text" class="form-control" id="college_city" required data-validation-required-message="Please enter your college name." autocomplete="off">
+                                    <input type="text" class="form-control" name="college_city" required data-validation-required-message="Please enter your college name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="form-group">
-                                    <label> Your Phone<span class="req">*</span> </label>
-                                    <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number." autocomplete="off">
-                                    <p class="help-block text-danger"></p>
-                                </div>
+
                                 <div class="mrgn-30-top">
                                     <button type="submit" class="btn btn-larger btn-block" style="color: #FBD62A;font-weight: bolder;" /> CLICK HERE TO REGISTER
                                     </button>
                                 </div>
-                                <div class="mrgn-30-top">
-                                    <button class="btn btn-larger btn-red btn-block" style="color: red;border-color: red;font-weight: bolder;" onclick="window.location.href='../index.html'" /> GO TO HOME
-                                    </button>
-                                </div>
                             </form>
+                            <div class="mrgn-30-top">
+                                <button class="btn btn-larger btn-red btn-block" style="color: red;border-color: red;font-weight: bolder;" onclick="window.location.href='../index.html'" /> GO TO HOME
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
