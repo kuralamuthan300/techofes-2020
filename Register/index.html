@@ -69,10 +69,34 @@
                                 </div><br/>
                                 <center><b style="padding: 10px; width: inherit; ">NOTE:CHECK YOUR DETAILS BEFORE YOU SUBMIT</b></center>
                                 <div class="mrgn-30-top">
-                                    <button type="submit" class="btn btn-larger btn-block" style="color: #FBD62A;font-weight: bolder;" /> CLICK HERE TO REGISTER
+                                    <button type="submit" class="btn btn-larger btn-block btn-green" style="color: green;font-weight: bolder;border-color: green;" /> CLICK HERE TO REGISTER
                                     </button>
                                 </div>
                             </form>
+
+
+                            <form id="forgot" action="./Forgot_Pay_at_hospi_ID/forgot_hospi_id.php" method="post">
+                                <br/>
+                                <h3>
+                                    <center style="font-weight: bolder;">ALREADY REGISTERED ?</center>
+                                </h3>
+                                <center><b style="padding: 10px; width: inherit; ">ENTER YOUR PHONE NO TO RETRIEVE YOUR DETAILS</b></center>
+                                <div class="form-group">
+                                    <label> Your Phone No<span class="req">*</span> </label>
+                                    <input type="number" class="form-control" name="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="mrgn-30-top">
+                                    <button type="submit" class="btn btn-larger btn-block" style="color: #FBD62A;font-weight: bolder;" /> GET DETAILS
+                                    </button>
+                                </div>
+                            </form>
+
+
+
+
+
                             <div class="mrgn-30-top">
                                 <button class="btn btn-larger btn-red btn-block" style="color: red;border-color: red;font-weight: bolder;" onclick="window.location.href='../index.html'" /> GO TO HOME
                                 </button>

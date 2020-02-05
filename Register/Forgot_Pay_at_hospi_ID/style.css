@@ -61,12 +61,7 @@ btn {
 }
 
 .btn-red {
-    border: 5px solid red !important;
-    margin: 0 auto;
-}
-
-.btn-green {
-    border: 5px solid green !important;
+    border: 5px solid yellow !important;
     margin: 0 auto;
 }
 
@@ -157,8 +152,6 @@ div#form {
     -moz-transition: all .6s;
     transition: all .6s;
 }
-
-#userform .nav-justified>li>a:hover {}
 
 #userform .nav-tabs>li>a {
     border: 0px solid transparent;
