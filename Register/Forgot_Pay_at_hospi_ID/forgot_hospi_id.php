@@ -33,8 +33,8 @@
    
     function validate_phone_and_mail($temp_phone){
         $servername = "localhost";
-        $username = "root";
-        $password = "root";
+        $username = "priya";
+        $password = "Priy@1998";
         $dbname = "techofesdb";
 
 // Create connection

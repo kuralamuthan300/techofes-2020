@@ -55,8 +55,8 @@
     function insert($phone,$fname,$lname,$college_id,$college_name,$college_city,$email)
     {
     $servername = "localhost";
-    $username = "root";
-    $password = "root";
+    $username = "priya";
+    $password = "Priy@1998";
     $dbname = "techofesdb";
     $rand_no = rand(10,100);
     $pay_at_hospi = substr($phone, 4,9 ).$rand_no;
@@ -99,10 +99,10 @@
     }
 
     function validate_phone_and_mail($temp_phone, $temp_mail){
-        $servername = "localhost";
-        $username = "root";
-        $password = "root";
-        $dbname = "techofesdb";
+    $servername = "localhost";
+    $username = "priya";
+    $password = "Priy@1998";
+    $dbname = "techofesdb";
 
 // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
