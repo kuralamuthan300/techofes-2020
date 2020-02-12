@@ -68,7 +68,7 @@
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
     if (!$conn) {
-        /*die("DB Connection failed: ");*/
+        die("");
     }
 
     $sql = "INSERT INTO online_reg (phone, name, college_id,college_name,college_place,mail_id,pay_at_hospi_id) VALUES ('".$phone."','".$fname." ".$lname."','".$college_id."','".$college_name."','".$college_city."','".$email."','".$pay_at_hospi."');" ;                                                      
@@ -102,8 +102,8 @@
 
     function validate_phone_and_mail($temp_phone, $temp_mail){
         $servername = "localhost";
-        $username = "root";
-        $password = "root";
+        $username = "priya";
+        $password = "Priy@1998";
         $dbname = "techofesdb";
 
 // Create connection
@@ -113,7 +113,8 @@
         {
         echo "<center style=\"color:red\">Registration Unuccessfull</center><br/>";
         echo "<center> DB error</center>";
-        die("DB Connection failed: " . $conn->connect_error);
+        die("");
+        //die("DB Connection failed: " . $conn->connect_error);
         }
 
         $sql = "SELECT * FROM online_reg where phone='".$temp_phone."' or mail_id='".$temp_mail."';";
