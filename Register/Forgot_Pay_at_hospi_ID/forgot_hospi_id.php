@@ -49,8 +49,17 @@
         die("DB Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT * FROM online_reg where phone='".$temp_phone."';";
-        $result = $conn->query($sql);
+        
+        
+        $stmt = $conn->prepare("SELECT * FROM online_reg WHERE phone=?");
+        $stmt->bind_param("s",$temp_phone);
+    
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+
+
+
         if ($result->num_rows == 0){
             echo "<center style=\"color:red\">Phone number not found !</center><br/>";
             $conn->close();

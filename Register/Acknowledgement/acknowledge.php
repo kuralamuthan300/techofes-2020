@@ -66,14 +66,31 @@
 
 // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    
+    
 // Check connection
     if (!$conn) {
         die("");
     }
 
-    $sql = "INSERT INTO online_reg (phone, name, college_id,college_name,college_place,mail_id,pay_at_hospi_id) VALUES ('".$phone."','".$fname." ".$lname."','".$college_id."','".$college_name."','".$college_city."','".$email."','".$pay_at_hospi."');" ;                                                      
+    //$sql = "INSERT INTO online_reg (phone, name, college_id,college_name,college_place,mail_id,pay_at_hospi_id) VALUES ('".$phone."','".$fname." ".$lname."','".$college_id."','".$college_name."','".$college_city."','".$email."','".$pay_at_hospi."');" ;                                                      
 
-    if (mysqli_query($conn, $sql)) {
+
+    $stmt = $conn->prepare("INSERT INTO online_reg (phone, name, college_id,college_name,college_place,mail_id,pay_at_hospi_id) VALUES (?, ?, ?,?,?,?,?)");
+    $fname=strtoupper($_POST["first_name"]);
+	$lname=strtoupper($_POST["last_name"]);
+ 	$email=$_POST["email"];
+	$phone=$_POST["phone"];
+	$college_id=strtoupper($_POST["c_id"]);
+    $college_name=strtoupper($_POST["c_name"]);
+    $college_city=strtoupper($_POST["college_city"]);
+
+    $bind_str = 'sssssss';
+    $name = $fname.$lname;
+    $stmt->bind_param($bind_str,$phone,$name,$college_id,$college_name,$college_city,$email,$pay_at_hospi);
+    
+    if ($stmt->execute()) {
         echo "<center style=\"color:green;font-size:20px;\">Registration Successfull</center><br/>";
         echo "<h3 style=\"text-align: center;color:white;font-weight:bolder\">TAKE A SCREENSHOT</h3></br>
         <center><b style=\"color:white;text-align: center; \">";
@@ -112,13 +129,23 @@
         if ($conn->connect_error)
         {
         echo "<center style=\"color:red\">Registration Unuccessfull</center><br/>";
-        echo "<center> DB error</center>";
+        echo "<center> Error Occoured</center>";
         die("");
         //die("DB Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT * FROM online_reg where phone='".$temp_phone."' or mail_id='".$temp_mail."';";
-        $result = $conn->query($sql);
+
+
+        
+        $stmt = $conn->prepare("SELECT * FROM online_reg WHERE phone=? or mail_id=?");
+        $stmt->bind_param('ss',$phone,$email);
+       
+ 	    $email=$_POST["email"];
+	    $phone=$_POST["phone"];
+	
+        $stmt->execute();
+        $result = $stmt->get_result();
+
         if ($result->num_rows == 0){
             $conn->close();
             return 1;
