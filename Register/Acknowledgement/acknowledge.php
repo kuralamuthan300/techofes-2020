@@ -39,14 +39,15 @@
 <?php
    
 
-   if(strlen($phone)>=10 && validate_phone_and_mail($phone,$email))
+   if(strlen($phone)==10 && validate_phone_and_mail($phone,$email))
    {
     insert($phone,$fname,$lname,$college_id,$college_name,$college_city,$email);
    }else{
-       if(strlen($phone)<10)
+       if(strlen($phone)<10 || strlen($phone)>10 )
        {
         echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
-           echo "<center>Phone number not valid</center>";
+        echo "<center>Phone number not valid</center><br/>";
+        echo "<center>Enter 10 Digit Phone number without country code(+91) and Try again.</center>";
        }else {
         echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
         echo "<center>Email or Phone already exists </center>";
