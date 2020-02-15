@@ -39,11 +39,11 @@
 <?php
    
 
-   if(strlen($phone)==10 && validate_phone_and_mail($phone,$email))
+   if(is_numeric($phone) && strlen($phone)==10 && validate_phone_and_mail($phone,$email))
    {
     insert($phone,$fname,$lname,$college_id,$college_name,$college_city,$email);
    }else{
-       if(strlen($phone)<10 || strlen($phone)>10 )
+       if(!is_numeric($phone) || (strlen($phone)<10 && strlen($phone)>10) )
        {
         echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
         echo "<center>Phone number not valid</center><br/>";
