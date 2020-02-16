@@ -43,12 +43,12 @@
    {
     insert($phone,$fname,$lname,$college_id,$college_name,$college_city,$email);
    }else{
-       if(!is_numeric($phone) || (strlen($phone)<10 && strlen($phone)>10) )
+       if(!is_numeric($phone) || strlen($phone)<10 || strlen($phone)>10 )
        {
         echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
         echo "<center>Phone number not valid</center><br/>";
         echo "<center>Enter <b style=\"color:'green'\">10 Digit</b> Phone number without country code(+91) and Try again.</center>";
-       }else if(!validate_phone_and_mail($phone,$email)) {
+       }else if(validate_phone_and_mail($phone,$email) == 0) {
         echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
         echo "<center>Email or Phone already exists </center>";
        }
@@ -90,7 +90,7 @@
     $college_city=strtoupper($_POST["college_city"]);
 
     $bind_str = 'sssssss';
-    $name = $fname.$lname;
+    $name = $fname." ".$lname;
     $stmt->bind_param($bind_str,$phone,$name,$college_id,$college_name,$college_city,$email,$pay_at_hospi);
     
     if ($stmt->execute()) {
