@@ -73,7 +73,7 @@
 // Check connection
     if (!$conn) {
         echo "<center style=\"color:red\">Registration Unsuccessfull</center><br/>";
-        echo "<center> Connection Error Occoured</center>";
+        echo "<center> Connection Error Occourred</center>";
         die("");
     }
 
@@ -113,7 +113,7 @@
         </ol>");
     } else {
         echo "<center style=\"color:red\">Registration Unsuccessfull(Err:2)</center><br/>";
-        echo "Error occoured ! Try again later !";
+        echo "Error occourred ! Try again later !";
         
     }
 
@@ -133,7 +133,7 @@
         if ($conn->connect_error)
         {
         echo "<center style=\"color:red\">Registration Unsuccessfull</center><br/>";
-        echo "<center> Connection Error Occoured</center>";
+        echo "<center> Connection Error Occourred</center>";
         die("");
         //die("DB Connection failed: " . $conn->connect_error);
         }
@@ -149,7 +149,7 @@
 	
         if(!$stmt->execute()){
             echo "<center style=\"color:red\">Registration UnSuccessfull</center><br/>";
-            echo "<center >Error Occoured(Err:4)</center><br/>";
+            echo "<center >Error Occourred(Err:4)</center><br/>";
         }
         $result = $stmt->get_result();
 
