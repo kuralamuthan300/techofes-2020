@@ -112,8 +112,9 @@
           <li>Using T-ID you can attend the respective events</li>
         </ol>");
     } else {
-        echo "<center style=\"color:red\">Registration Unsuccessfull</center><br/>";
+        echo "<center style=\"color:red\">Registration Unsuccessfull(Err:2)</center><br/>";
         echo "Error occoured ! Try again later !";
+        
     }
 
     mysqli_close($conn);
@@ -146,7 +147,10 @@
  	    $email=$_POST["email"];
 	    $phone=$_POST["phone"];
 	
-        $stmt->execute();
+        if(!$stmt->execute()){
+            echo "<center style=\"color:red\">Registration UnSuccessfull</center><br/>";
+            echo "<center >Error Occoured(Err:4)</center><br/>";
+        }
         $result = $stmt->get_result();
 
         if ($result->num_rows == 0){

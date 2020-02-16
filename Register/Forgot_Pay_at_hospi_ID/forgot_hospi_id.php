@@ -62,7 +62,10 @@
         $stmt = $conn->prepare("SELECT * FROM online_reg WHERE phone=?");
         $stmt->bind_param("s",$temp_phone);
     
-        $stmt->execute();
+        if( !$stmt->execute()){
+            echo "<center style=\"color:red\">Fetch UnSuccessfull</center><br/>";
+            echo "<center> Error Occurred !(Err:3)</center>";
+        }
         $result = $stmt->get_result();
 
 
@@ -72,8 +75,8 @@
             echo "<center style=\"color:red\">Phone number not found !</center><br/>";
             $conn->close();
         }else{
-            while($row = $result->fetch_assoc()) {
-                echo "<center style=\"color:green;font-size:20px;\">DATA RETRIEVED SUCCESSFULLY</center><br/>";
+        while($row = $result->fetch_assoc()) {
+        echo "<center style=\"color:green;font-size:20px;\">DATA RETRIEVED SUCCESSFULLY</center><br/>";
         echo "<h3 style=\"text-align: center;color:white;font-weight:bolder\">TAKE A SCREENSHOT</h3></br>
         <center><b style=\"color:white;text-align: center; \">";
         echo "Name                    : ".$row["name"]."<br />";
