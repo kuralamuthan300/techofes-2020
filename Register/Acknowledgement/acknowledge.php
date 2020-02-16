@@ -47,7 +47,7 @@
        {
         echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
         echo "<center>Phone number not valid</center><br/>";
-        echo "<center>Enter 10 Digit Phone number without country code(+91) and Try again.</center>";
+        echo "<center>Enter <b style=\"color:'green'\">10 Digit</b> Phone number without country code(+91) and Try again.</center>";
        }else if(!validate_phone_and_mail($phone,$email)) {
         echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
         echo "<center>Email or Phone already exists </center>";

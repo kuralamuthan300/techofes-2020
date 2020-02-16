@@ -30,8 +30,16 @@
 <br/>
 
 <?php
+   if(is_numeric($phone))
+   {
+    validate_phone_and_mail($phone);
+   }else{
+    echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Fetch Unsuccessfull</center><br/>";
+        echo "<center>Phone number not valid</center><br/>";
+        echo "<center>Enter <b style=\"color:'green'\">10 Digit</b> Phone number without country code(+91) and Try again.</center>";
+
+   }
    
-   validate_phone_and_mail($phone);
    
     function validate_phone_and_mail($temp_phone){
         $servername = "localhost";
