@@ -90,7 +90,7 @@
         echo "T-ID             : Not generated<br /><br />";
         }else
         {
-        echo "T-ID             :".$row["t_id"]."<br /><br />";
+        echo "<div style=\"color:#FBD62A;font-weight: 900;\">T-ID             :".$row["t_id"]."</div><br /><br />";
         }
         
         echo "</b></center>";
