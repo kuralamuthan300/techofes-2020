@@ -48,7 +48,7 @@
         echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
         echo "<center>Phone number not valid</center><br/>";
         echo "<center>Enter 10 Digit Phone number without country code(+91) and Try again.</center>";
-       }else {
+       }else if(!validate_phone_and_mail($phone,$email)) {
         echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
         echo "<center>Email or Phone already exists </center>";
        }
@@ -72,6 +72,8 @@
     
 // Check connection
     if (!$conn) {
+        echo "<center style=\"color:red\">Registration Unsuccessfull</center><br/>";
+        echo "<center> Connection Error Occoured</center>";
         die("");
     }
 
@@ -110,7 +112,7 @@
           <li>Using T-ID you can attend the respective events</li>
         </ol>");
     } else {
-        echo "<center style=\"color:red\">Registration Unuccessfull</center><br/>";
+        echo "<center style=\"color:red\">Registration Unsuccessfull</center><br/>";
         echo "Error occoured ! Try again later !";
     }
 
@@ -129,8 +131,8 @@
 // Check connection
         if ($conn->connect_error)
         {
-        echo "<center style=\"color:red\">Registration Unuccessfull</center><br/>";
-        echo "<center> Error Occoured</center>";
+        echo "<center style=\"color:red\">Registration Unsuccessfull</center><br/>";
+        echo "<center> Connection Error Occoured</center>";
         die("");
         //die("DB Connection failed: " . $conn->connect_error);
         }

@@ -44,9 +44,9 @@
 // Check connection
         if ($conn->connect_error)
         {
-        echo "<center style=\"color:red\">Fetch Unuccessfull</center><br/>";
-        echo "<center> DB error</center>";
-        die("DB Connection failed: " . $conn->connect_error);
+        echo "<center style=\"color:red\">Fetch UnSuccessfull</center><br/>";
+        echo "<center> Connection error !</center>";
+        die("");
         }
 
         
