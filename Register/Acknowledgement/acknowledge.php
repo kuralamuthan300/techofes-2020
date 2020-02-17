@@ -39,19 +39,24 @@
 <?php
    
 
-   if(is_numeric($phone) && strlen($phone)==10 && validate_phone_and_mail($phone,$email))
+   if(!is_null($fname) && !is_null($lname) && !is_null($email) && !is_null($phone) && !is_null($college_city) && !is_null($college_id) && !is_null($college_name) && is_numeric($phone) && strlen($phone)==10 && validate_phone_and_mail($phone,$email))
    {
     insert($phone,$fname,$lname,$college_id,$college_name,$college_city,$email);
    }else{
        if(!is_numeric($phone) || strlen($phone)<10 || strlen($phone)>10 )
        {
-        echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
+        echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessful</center><br/>";
         echo "<center>Phone number not valid</center><br/>";
         echo "<center>Enter <b style=\"color:'green'\">10 Digit</b> Phone number without country code(+91) and Try again.</center>";
        }else if(validate_phone_and_mail($phone,$email) == 0) {
-        echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessfull</center><br/>";
+        echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessful</center><br/>";
         echo "<center>Email or Phone already exists </center>";
+       }else if(is_null($fname) || is_null($lname) || is_null($email) || is_null($phone) || is_null($college_city) || is_null($college_id) || is_null($college_name))
+       {
+        echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Registration Unsuccessful</center><br/>";
+        echo "<center>Empty input detected.Fill all the details in registration page.</center>";
        }
+
         
    }
 
@@ -72,7 +77,7 @@
     
 // Check connection
     if (!$conn) {
-        echo "<center style=\"color:red\">Registration Unsuccessfull</center><br/>";
+        echo "<center style=\"color:red\">Registration Unsuccessful</center><br/>";
         echo "<center> Connection Error Occourred</center>";
         die("");
     }
@@ -112,7 +117,7 @@
           <li>Using T-ID you can attend the respective events</li>
         </ol>");
     } else {
-        echo "<center style=\"color:red\">Registration Unsuccessfull(Err:2)</center><br/>";
+        echo "<center style=\"color:red\">Registration Unsuccessful(Err:2)</center><br/>";
         echo "Error occourred ! Try again later !";
         
     }
@@ -132,7 +137,7 @@
 // Check connection
         if ($conn->connect_error)
         {
-        echo "<center style=\"color:red\">Registration Unsuccessfull</center><br/>";
+        echo "<center style=\"color:red\">Registration Unsuccessful</center><br/>";
         echo "<center> Connection Error Occourred</center>";
         die("");
         //die("DB Connection failed: " . $conn->connect_error);

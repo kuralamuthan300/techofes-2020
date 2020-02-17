@@ -34,7 +34,7 @@
    {
     validate_phone_and_mail($phone);
    }else{
-    echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Fetch Unsuccessfull</center><br/>";
+    echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Fetch Unsuccessful</center><br/>";
         echo "<center>Phone number not valid</center><br/>";
         echo "<center>Enter <b style=\"color:'green'\">10 Digit</b> Phone number without country code(+91) and Try again.</center>";
 
@@ -52,7 +52,7 @@
 // Check connection
         if ($conn->connect_error)
         {
-        echo "<center style=\"color:red\">Fetch UnSuccessfull</center><br/>";
+        echo "<center style=\"color:red\">Fetch UnSuccessful</center><br/>";
         echo "<center> Connection error !</center>";
         die("");
         }
@@ -63,7 +63,7 @@
         $stmt->bind_param("s",$temp_phone);
     
         if( !$stmt->execute()){
-            echo "<center style=\"color:red\">Fetch UnSuccessfull</center><br/>";
+            echo "<center style=\"color:red\">Fetch UnSuccessful</center><br/>";
             echo "<center> Error Occurred !(Err:3)</center>";
         }
         $result = $stmt->get_result();
