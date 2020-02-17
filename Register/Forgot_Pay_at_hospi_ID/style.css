@@ -65,6 +65,11 @@ btn {
     margin: 0 auto;
 }
 
+.btn-green {
+    border: 5px solid green !important;
+    margin: 0 auto;
+}
+
 .btn-larger:active,
 .btn-larger.active,
 .open .dropdown-toggle.btn-larger {

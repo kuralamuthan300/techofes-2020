@@ -12,6 +12,26 @@ body {
 
 /*Social icon */
 
+.vote:link,
+.vote:visited {
+    border-color: #FFDD1B;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 15px;
+    border-width: 2px;
+    border-style: solid;
+    font-weight: bold;
+}
+
+.vote:hover,
+.vote:active {
+    background-color: rgba(255, 221, 27, 0.603);
+    border-color: white;
+}
+
 
 /* Header */
 
