@@ -40,25 +40,19 @@
                             </p>
                             
 <?php
-	$phone=$_POST["phone"];
+	$mail=$_POST["mail"];
 ?>
 
 <br/>
 <br/>
 
 <?php
-   if(is_numeric($phone))
-   {
-    validate_phone_and_mail($phone);
-   }else{
-    echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Voting Unsuccessful</center><br/>";
-        echo "<center style=\"color:white;\">Phone number not valid</center><br/>";
-        echo "<center style=\"color:white;\">Enter registered <b style=\"color:'green'\">10 Digit</b> Phone number without country code(+91) and Try again.</center>";
-
-   }
+    
+    validate_phone_and_mail(trim($mail));
    
    
-    function validate_phone_and_mail($temp_phone){
+   
+    function validate_phone_and_mail($mail){
         $servername = "localhost";
         $username = "priya";
         $password = "Priy@1998";
@@ -76,8 +70,8 @@
 
         
         
-        $stmt = $conn->prepare("SELECT * FROM online_reg WHERE phone=?");
-        $stmt->bind_param("s",$temp_phone);
+        $stmt = $conn->prepare("SELECT * FROM online_reg WHERE mail_id=?");
+        $stmt->bind_param("s",$mail);
     
         if( !$stmt->execute()){
             echo "<center style=\"color:red\">Voting UnSuccessful</center><br/>";
@@ -88,8 +82,8 @@
         $reg_rec = $result->num_rows;
 
 
-        $stmt = $conn->prepare("SELECT * FROM voting WHERE phone=?");
-        $stmt->bind_param("s",$temp_phone);
+        $stmt = $conn->prepare("SELECT * FROM voting WHERE mail=?");
+        $stmt->bind_param("s",$mail);
     
         if( !$stmt->execute()){
             echo "<center style=\"color:red\">Voting UnSuccessful</center><br/>";
@@ -102,7 +96,7 @@
 
 
         if ($reg_rec == 0){
-            echo "<center style=\"color:red\">Phone number not found !<br/>Register and try again !.</center><br/>";
+            echo "<center style=\"color:red\"><b>E-Mail ID not found !<br/>Register and try again !</b></center><br/>";
             $conn->close();
             return;
         }
@@ -112,9 +106,9 @@
             return;
         }else{
             
-            $stmt1 = $conn->prepare("INSERT INTO voting (phone,actor,actress,music_director,film,director) VALUES (?,?,?,?,?,?)");
+            $stmt1 = $conn->prepare("INSERT INTO voting (mail,actor,actress,music_director,film,director) VALUES (?,?,?,?,?,?)");
             $bind_str = 'ssssss';
-            $stmt1->bind_param($bind_str,$temp_phone,$actor,$actress,$music,$movie,$dir);
+            $stmt1->bind_param($bind_str,$mail,$actor,$actress,$music,$movie,$dir);
             $movie = $_POST['movie'];
             $actor = $_POST['actor'];
             $actress = $_POST['actress'];
