@@ -5,7 +5,24 @@
 <link rel="icon" href="title_logo.png" type="image/x-icon" style="border-radius: 100%;" />
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<style>
 
+.submit-red {
+    border-radius: 10px;
+    border-color: #FBD62A;
+    border: none;
+    border-width: 2px;
+    border-style: solid;
+    background-color: black;
+    color: #FBD62A;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: larger;
+}
+</style>
 <body style="background-color:black;">
     <script src="./js/grid.js "></script>
     <script src="./js/script.js "></script>
@@ -118,8 +135,13 @@
 
     }
 ?>
+<br/>
 <center>
-<button class="submit" onclick="window.location.href='../../../index.html'">GO HOME</button>
+<button class="submit" onclick="window.location.href='../../../Proshows/index.html'">BOOK TICKETS FOR PROSHOWS</button>
+</center>
+
+<center>
+<button class="submit-red" onclick="window.location.href='../../../index.html'">        GO TO HOME       </button>
 </center>
                         </div>
                     </div>
