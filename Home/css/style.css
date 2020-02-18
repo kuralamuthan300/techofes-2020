@@ -157,6 +157,9 @@ img {
         margin: 0 auto;
         border-radius: 20px;
     }
+    .vote {
+        font-size: smaller;
+    }
 }
 
 

@@ -36,7 +36,7 @@
    }else{
     echo "<center style=\"color:red;font-size:20px;font-weight:bolder;\">Voting Unsuccessful</center><br/>";
         echo "<center style=\"color:white;\">Phone number not valid</center><br/>";
-        echo "<center style=\"color:white;\">Enter <b style=\"color:'green'\">10 Digit</b> Phone number without country code(+91) and Try again.</center>";
+        echo "<center style=\"color:white;\">Enter registered <b style=\"color:'green'\">10 Digit</b> Phone number without country code(+91) and Try again.</center>";
 
    }
    
