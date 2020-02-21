@@ -77,7 +77,7 @@
                     </div>
                     <p class="movie-card__desc" style="font:lato">The night of breezy voices and highly comforting strums. Notable singers and their bands perform on the main stage. Noteworthy singers like Saindhavi, Gaana bala, parikrama band, Bombay Jayashree, Andrea, Karthik, Vijay Yesudas, Aalap
                         Raju, Ramya NSK and many famous singers have performed on the grand stage.</p>
-                    <button class="btn btn-outline  movie-card__button glow_book_tickets" type="button" onclick="javascript:bookings()">Book Tickets</button>
+                    <button class="btn btn-outline  movie-card__button glow_book_tickets" type="button" onclick="javascript:concert()">Book Tickets</button>
                 </div>
             </div>
             <div class="movie-card t_awards" data-movie="T-awards">
@@ -89,7 +89,7 @@
                     </div>
                     <p class="movie-card__desc">The signature event of techofes for presenting accolades to the best artists in Tamil Cinema Industry.Nearly twenty artists will be honoured on this day followed by mesmerising performances.It is highly popular and the student crowd
                         throngs to have a look at their on-screen role models and more than life heros and heroines.</p>
-                    <button class="btn  btn-outline movie-card__button glow_book_tickets" type="button" onclick="javascript:bookings()">Book Tickets</button>
+                    <button class="btn  btn-outline movie-card__button glow_book_tickets" type="button" onclick="javascript:award()">Book Tickets</button>
                 </div>
             </div>
             <div class="movie-card choreo" data-movie="Choreo night">
@@ -101,7 +101,7 @@
                     </div>
                     <p class="movie-card__desc"> The choreo night boasts of a rich tradition of involvement dance performances by dance groups from different colleges battling it out to be the best.The Talent of Techofes has been a spot of attraction for the students who wish for
                         their voices to be heard.</p>
-                    <button class="btn btn-outline movie-card__button glow_book_tickets" type="button" onclick="javascript:bookings()">Book Tickets</button>
+                    <button class="btn btn-outline movie-card__button glow_book_tickets" type="button" onclick="javascript:choreo()">Book Tickets</button>
                 </div>
             </div>
         </div>
@@ -121,8 +121,16 @@
     <br/>
     <br/>
     <script type="text/javascript">
-        function bookings() {
-            alert("Bookings will open soon !");
+        function concert() {
+            window.open("https://in.bookmyshow.com/events/concert-night-techofes-20/ET00127143", "_blank");
+        }
+
+        function award() {
+            window.open("https://in.bookmyshow.com/events/t-awards-techofes-20/ET00127150", "_blank");
+        }
+
+        function choreo() {
+            window.open("https://in.bookmyshow.com/events/choreo-night-talent-of-techofes-and-dj-night/ET00127149", "_blank");
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>

@@ -142,8 +142,9 @@ body {
 
 .core_name {
     color: white;
-    font-size: 13px;
+    font-size: 15px;
     padding: 20px;
+    font-weight: bolder;
 }
 
 .photos {
@@ -158,12 +159,6 @@ body {
     padding: 30px;
     transition: transform .2s;
     /* Animation */
-}
-
-@media screen and (max-width: 900px) {
-    .photos {
-        border-radius: 15%;
-    }
 }
 
 .domain_name {
@@ -192,17 +187,7 @@ body {
         border-style: solid;
     }
     .domain_name {
-        font-size: 35px;
-    }
-}
-
-@media (max-width:800px) {
-    .logo a {
-        font-size: 60px;
-    }
-    .phno {
-        height: 3vh;
-        width: 7vw;
+        font-size: 25px;
     }
 }
 
@@ -223,9 +208,9 @@ body {
 }
 
 .phno {
-    width: 30vw;
+    width: 50vw;
     height: 5vh;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: large;
     text-align: center;
 }
@@ -235,4 +220,36 @@ select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio]+img {
+    cursor: pointer;
+}
+
+[type=radio]:checked+img {
+    box-shadow: 0 0 50px #fbd62a;
+}
+
+@media (max-width:800px) {
+    .logo a {
+        font-size: 60px;
+    }
+    .phno {
+        height: 3vh;
+        width: 7vw;
+    }
+    .phno {
+        width: 90vw;
+        height: 5vh;
+        border-radius: 10px;
+        font-size: large;
+        text-align: center;
+    }
 }
