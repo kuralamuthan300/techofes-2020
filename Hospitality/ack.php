@@ -102,7 +102,7 @@ $stmt = $conn->prepare("UPDATE online_reg SET t_id=? WHERE phone=?");
       echo "<h3 style=\"text-align: center;color:black;font-weight:bolder\"></h3></br>
       <center><b style=\"color:black;text-align: center;font-weight:bolder \">";
       echo "<h1 style=\"color:green;\"><b>T-ID                    : T-".$tid."</b></h1><br /><br><br>";
-      echo "<a href=\"/Techofes%202020/Hospitality/online.php\" style=\"border-color:blue;border-style:solid;border-width:5px;\">CLICK HERE TO GO BACK!</a>";
+      echo "<a href=\"/Hospitality/online.php\" style=\"border-color:blue;border-style:solid;border-width:5px;\">CLICK HERE TO GO BACK!</a>";
      
   } else {
       echo "<center style=\"color:red\">Registration Unsuccessful(Err:2)</center><br/>";

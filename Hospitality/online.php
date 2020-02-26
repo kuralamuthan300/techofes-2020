@@ -14,7 +14,7 @@
     <center><h1><b>ONLINE</h1></b></center>
     
 <div class="container">
-  <form action="/Techofes 2020/Hospitality/online.php">
+  <form action="/Hospitality/online.php">
     <div class="form-group">
         <br>
         <br>
